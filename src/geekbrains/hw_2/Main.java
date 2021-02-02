@@ -11,6 +11,10 @@ public class Main {
         System.out.println(Arrays.toString(arr1));
         int[] arr2 = Main.changeArray();
         System.out.println(Arrays.toString(arr2));
+        int arrMin = Main.min();
+        System.out.println(arrMin);
+        int arrMax = Main.max();
+        System.out.println(arrMax);
         int[][] arr3 = Main.createArray();
         for (int i = 0; i < arr3.length; i++) {
             System.out.println(Arrays.toString(arr3[i]));
@@ -38,7 +42,7 @@ public class Main {
         int[] arr = new int[8];
 
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = i * 3;
+            arr[i] = i * 3 + 1;
         }
         return arr;
     }
@@ -57,6 +61,32 @@ public class Main {
     }
 
     // Задание 4
+
+    public static int min() {
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int minValue = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < minValue) {
+                minValue = arr[i];
+            }
+        }
+        return minValue;
+    }
+
+    public static int max() {
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        int maxValue = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > maxValue) {
+                maxValue = arr[i];
+            }
+        }
+        return maxValue;
+    }
+
+    // Задание 5
 
     public static int[][] createArray() {
         int[][] arr = new int[8][8];
